@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: radial-gradient(at 76% 28%, #ffa100 -37%, #72fff6 101%);
+  height: 100%;
+}
+
+#game {
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  margin: auto;
+  overflow: hidden;
+}
+#block {
+  width: 90px;
+  height: 500px;
+  background-color: lightgray;
+  position: relative;
+  left: 400px;
+  animation: block 3s infinite linear;
+}
+@keyframes block {
+  0% {
+    left: 400px;
+  }
+  100% {
+    left: -90px;
+  }
+}
+#hole {
+  width: 90px;
+  height: 200px;
+  background-color: yellow;
+  position: relative;
+  left: 400px;
+  top: -500px;
+  animation: block 3s infinite linear;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+#character {
+  /* width: 20px;
+  height: 20px; */
+
+  position: absolute;
+  top: 100px;
+  border-radius: 50%;
+
+  /* z-index: 0; */
+  background-color: yellow;
+  border: 6px solid #222;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  /* margin: 50px auto; */
+  box-shadow: 2px 2px 1px #b8b8b8;
+}
+.eye {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  background: #222;
+  margin-top: 15px;
+  margin-left: 13px;
+  margin-right: 52px;
+}
+
+.eye.right {
+  margin-left: 52px;
+  margin-right: 13px;
+}
+
+.mouth {
+  position: absolute;
+  z-index: 1;
+  top: -19px;
+  left: 0;
+  right: 0;
+  height: 75px;
+  width: 70px;
+  margin: 0 auto;
+  border-bottom: 8px solid #222;
+  border-radius: 100%;
+}
